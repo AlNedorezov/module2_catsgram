@@ -8,19 +8,21 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.yandex.practicum.catsgram.model.Post;
+import ru.yandex.practicum.catsgram.model.Update;
+
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.validation.Valid;
 
 @Slf4j
 @RestController
 public class PostController {
     private static final int MAX_NAME_SIZE = 200;
 
-    private final Map<String, Post> posts = new HashMap<>();
+    private long idGenerator = 0L;
+    private final Map<Long, Post> posts = new HashMap<>();
 
     @GetMapping("/posts")
     public List<Post> findAll() {
@@ -30,15 +32,17 @@ public class PostController {
     @PostMapping(value = "/post")
     public void create(@Valid @RequestBody Post post) {
         validate(post);
-        // post.setId();
-        posts.put(post.getAuthor(), post);
+        post.setId(++idGenerator);
+        posts.put(post.getId(), post);
         log.info("New post created");
     }
 
     @PutMapping(value = "/post")
-    public void update(@Valid @RequestBody Post post) {
+    public void update(
+            @Validated(Update.class) // <-- см.
+            @RequestBody Post post) {
         validate(post);
-        posts.put(post.getAuthor(), post);
+        posts.put(post.getId(), post);
         log.info("New post created");
     }
 
