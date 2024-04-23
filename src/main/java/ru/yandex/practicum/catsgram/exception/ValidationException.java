@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.controller;
+package ru.yandex.practicum.catsgram.exception;
 
 public class ValidationException extends RuntimeException {
     public ValidationException(String message) {
