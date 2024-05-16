@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Component
-public class InMemoryPostStorage extends StorageData implements PostStorage {
+public class InMemoryPostStorage implements PostStorage {
     private final HashMap<Long, Post> storage = new HashMap<>();
     private long idGenerator = 0L;
 
