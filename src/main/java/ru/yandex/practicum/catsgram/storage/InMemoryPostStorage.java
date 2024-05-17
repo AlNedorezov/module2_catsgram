@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 import ru.yandex.practicum.catsgram.exception.IncorrectObjectStructureException;
 import ru.yandex.practicum.catsgram.exception.NotFoundException;
 import ru.yandex.practicum.catsgram.model.Post;
-import ru.yandex.practicum.catsgram.model.StorageData;
 
 import java.util.ArrayList;
 import java.util.HashMap;
