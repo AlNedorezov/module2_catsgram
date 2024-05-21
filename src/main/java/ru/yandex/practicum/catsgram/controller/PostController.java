@@ -12,7 +12,7 @@ import ru.yandex.practicum.catsgram.model.Post;
 import ru.yandex.practicum.catsgram.model.Update;
 import ru.yandex.practicum.catsgram.service.PostService;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import java.util.List;
 
 @Slf4j
