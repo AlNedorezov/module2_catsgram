@@ -1,9 +1,9 @@
-package ru.yandex.practicum.catsgram.storage;
+package ru.yandex.practicum.catsgram.post;
 
 import org.springframework.stereotype.Component;
 import ru.yandex.practicum.catsgram.exception.IncorrectObjectStructureException;
 import ru.yandex.practicum.catsgram.exception.NotFoundException;
-import ru.yandex.practicum.catsgram.model.Post;
+import ru.yandex.practicum.catsgram.post.model.Post;
 
 import java.util.ArrayList;
 import java.util.HashMap;

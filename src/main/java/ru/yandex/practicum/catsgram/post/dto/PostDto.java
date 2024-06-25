@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.controller;
+package ru.yandex.practicum.catsgram.post.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import ru.yandex.practicum.catsgram.model.Update;
+import ru.yandex.practicum.catsgram.common.Update;
 
 import java.time.Instant;
 

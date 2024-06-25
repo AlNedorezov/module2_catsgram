@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.storage;
+package ru.yandex.practicum.catsgram.post;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;
@@ -7,7 +7,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 import ru.yandex.practicum.catsgram.exception.NotFoundException;
-import ru.yandex.practicum.catsgram.model.Post;
+import ru.yandex.practicum.catsgram.post.model.Post;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;

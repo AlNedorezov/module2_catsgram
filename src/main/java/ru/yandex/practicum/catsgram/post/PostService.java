@@ -1,11 +1,11 @@
-package ru.yandex.practicum.catsgram.service;
+package ru.yandex.practicum.catsgram.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.yandex.practicum.catsgram.controller.PostDto;
 import ru.yandex.practicum.catsgram.exception.ValidationException;
-import ru.yandex.practicum.catsgram.model.Post;
-import ru.yandex.practicum.catsgram.storage.Storage;
+import ru.yandex.practicum.catsgram.common.Storage;
+import ru.yandex.practicum.catsgram.post.dto.PostDto;
+import ru.yandex.practicum.catsgram.post.model.Post;
 
 import java.util.List;
 

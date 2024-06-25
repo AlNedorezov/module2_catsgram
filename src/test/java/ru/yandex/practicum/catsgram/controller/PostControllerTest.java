@@ -2,8 +2,8 @@ package ru.yandex.practicum.catsgram.controller;
 
 import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
-import ru.yandex.practicum.catsgram.model.Post;
-import ru.yandex.practicum.catsgram.model.Update;
+import ru.yandex.practicum.catsgram.post.model.Post;
+import ru.yandex.practicum.catsgram.common.Update;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;

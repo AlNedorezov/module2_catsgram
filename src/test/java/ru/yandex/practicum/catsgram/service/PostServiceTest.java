@@ -2,9 +2,10 @@ package ru.yandex.practicum.catsgram.service;
 
 import org.junit.jupiter.api.Test;
 import ru.yandex.practicum.catsgram.exception.ValidationException;
-import ru.yandex.practicum.catsgram.model.Post;
-import ru.yandex.practicum.catsgram.storage.InMemoryPostStorage;
-import ru.yandex.practicum.catsgram.storage.Storage;
+import ru.yandex.practicum.catsgram.post.model.Post;
+import ru.yandex.practicum.catsgram.post.InMemoryPostStorage;
+import ru.yandex.practicum.catsgram.common.Storage;
+import ru.yandex.practicum.catsgram.post.PostService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

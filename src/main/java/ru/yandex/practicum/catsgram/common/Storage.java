@@ -1,6 +1,4 @@
-package ru.yandex.practicum.catsgram.storage;
-
-import ru.yandex.practicum.catsgram.model.StorageData;
+package ru.yandex.practicum.catsgram.common;
 
 import java.util.List;
 

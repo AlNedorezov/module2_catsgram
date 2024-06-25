@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.model;
+package ru.yandex.practicum.catsgram.exception.dto;
 
 public class ErrorResponse {
     private final String error;
