@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import java.time.Instant;
 
 @Getter
@@ -16,10 +14,8 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Post extends StorageData {
-    @NotBlank
     private String author; // автор
     private Instant creationDate = Instant.now(); // дата создания
-    @Size(min = 5)
     private String description; // описание
     private String photoUrl; // url-адрес фотографии
 

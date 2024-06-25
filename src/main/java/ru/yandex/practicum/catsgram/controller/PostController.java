@@ -26,12 +26,12 @@ public class PostController {
     }
 
     @GetMapping("/posts")
-    public List<Post> findAll() {
+    public List<PostDto> findAll() {
         return service.getAll();
     }
 
     @PostMapping(value = "/post")
-    public void create(@Valid @RequestBody Post post) {
+    public void create(@Valid @RequestBody PostDto post) {
         log.info("creating a new post");
         service.create(post);
     }
@@ -39,7 +39,7 @@ public class PostController {
     @PutMapping(value = "/post")
     public void update(
             @Validated(Update.class) // <-- см.
-            @RequestBody Post post) {
+            @RequestBody PostDto post) {
         log.info("New post created");
         service.update(post);
     }

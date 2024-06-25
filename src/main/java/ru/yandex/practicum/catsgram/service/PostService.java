@@ -2,6 +2,7 @@ package ru.yandex.practicum.catsgram.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.yandex.practicum.catsgram.controller.PostDto;
 import ru.yandex.practicum.catsgram.exception.ValidationException;
 import ru.yandex.practicum.catsgram.model.Post;
 import ru.yandex.practicum.catsgram.storage.Storage;
@@ -18,20 +19,25 @@ public class PostService {
         this.postStorage = storage;
     }
 
-    public Post create(Post post) {
+    public Post create(PostDto postDto) {
+        final Post post = PostMapper.toPost(postDto);
         validate(post);
         postStorage.create(post);
         return post;
     }
 
-    public Post update(Post post) {
+    public Post update(PostDto postDto) {
+        final Post post = PostMapper.toPost(postDto);
         validate(post);
         postStorage.update(post);
         return post;
     }
 
-    public List<Post> getAll() {
-        return postStorage.getAll();
+    public List<PostDto> getAll() {
+        return postStorage.getAll()
+                .stream()
+                .map(PostMapper::toPostDto)
+                .toList();
     }
 
     private static final int MAX_NAME_SIZE = 200;
