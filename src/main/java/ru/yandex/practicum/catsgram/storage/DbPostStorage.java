@@ -29,7 +29,7 @@ public class DbPostStorage implements PostStorage {
         String sqlQuery = """
                 insert into posts (
                     author, creation_date, description, photo_url
-                ) 
+                )
                 values (?, ?, ?, ?)
                 """;
 
