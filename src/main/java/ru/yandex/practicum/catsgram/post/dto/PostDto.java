@@ -28,4 +28,11 @@ public class PostDto {
     @Size(min = 5)
     private String description; // описание
     private String photoUrl;
+
+    public PostDto(String author, String description, String photoUrl) {
+        this.author = author;
+        this.creationDate = Instant.now();
+        this.description = description;
+        this.photoUrl = photoUrl;
+    }
 }

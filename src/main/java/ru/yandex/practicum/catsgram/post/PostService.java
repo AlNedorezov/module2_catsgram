@@ -42,7 +42,7 @@ public class PostService {
 
     private static final int MAX_NAME_SIZE = 200;
 
-    void validate(Post post) {
+    public void validate(Post post) {
         if (post.getAuthor() == null || post.getAuthor().isEmpty()) {
             throw new ValidationException("Post author invalid");
         }

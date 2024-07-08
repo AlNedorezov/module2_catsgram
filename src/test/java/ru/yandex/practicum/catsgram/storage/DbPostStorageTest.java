@@ -7,6 +7,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
+import ru.yandex.practicum.catsgram.post.PostMapper;
+import ru.yandex.practicum.catsgram.post.dto.PostDto;
 import ru.yandex.practicum.catsgram.post.model.Post;
 import ru.yandex.practicum.catsgram.post.DbPostStorage;
 
