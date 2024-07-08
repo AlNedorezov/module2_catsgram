@@ -1,18 +1,16 @@
-package ru.yandex.practicum.catsgram.service;
+package ru.yandex.practicum.catsgram.validator;
 
 import org.junit.jupiter.api.Test;
 import ru.yandex.practicum.catsgram.exception.ValidationException;
+import ru.yandex.practicum.catsgram.post.PostValidator;
 import ru.yandex.practicum.catsgram.post.model.Post;
-import ru.yandex.practicum.catsgram.post.InMemoryPostStorage;
-import ru.yandex.practicum.catsgram.common.Storage;
-import ru.yandex.practicum.catsgram.post.PostService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class PostServiceTest {
-    Storage<Post> postStorage = new InMemoryPostStorage();
-    PostService service = new PostService(postStorage);
+class PostValidatorTest {
+
+    PostValidator validator = new PostValidator();
 
     @Test
     void validatePostOk() {
@@ -21,7 +19,7 @@ class PostServiceTest {
                 "test post",
                 "https://online.ssidigital.in/p/apachemaven"
         );
-        service.validate(validPost);
+        validator.validate(validPost);
     }
 
     @Test
@@ -33,7 +31,7 @@ class PostServiceTest {
         );
         Exception exception = assertThrows(
                 ValidationException.class,
-                () -> service.validate(post)
+                () -> validator.validate(post)
         );
         assertEquals(
                 "Post author invalid",

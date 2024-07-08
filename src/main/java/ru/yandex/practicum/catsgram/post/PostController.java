@@ -1,5 +1,6 @@
 package ru.yandex.practicum.catsgram.post;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -9,8 +10,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.yandex.practicum.catsgram.common.Update;
-
-import jakarta.validation.Valid;
 import ru.yandex.practicum.catsgram.post.dto.PostDto;
 
 import java.util.List;
