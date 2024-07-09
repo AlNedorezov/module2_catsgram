@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.controller;
+package ru.yandex.practicum.catsgram.common;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.yandex.practicum.catsgram.exception.DuplicateException;
 import ru.yandex.practicum.catsgram.exception.NotFoundException;
 import ru.yandex.practicum.catsgram.exception.ValidationException;
-import ru.yandex.practicum.catsgram.model.ErrorResponse;
+import ru.yandex.practicum.catsgram.exception.dto.ErrorResponse;
 
 @Slf4j
 @RestControllerAdvice

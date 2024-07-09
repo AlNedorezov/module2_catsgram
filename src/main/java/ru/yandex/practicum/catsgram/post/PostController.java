@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.controller;
+package ru.yandex.practicum.catsgram.post;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import ru.yandex.practicum.catsgram.model.Post;
-import ru.yandex.practicum.catsgram.model.Update;
-import ru.yandex.practicum.catsgram.service.PostService;
+import ru.yandex.practicum.catsgram.common.Update;
 
 import jakarta.validation.Valid;
+import ru.yandex.practicum.catsgram.post.dto.PostDto;
+
 import java.util.List;
 
 @Slf4j
@@ -26,12 +26,12 @@ public class PostController {
     }
 
     @GetMapping("/posts")
-    public List<Post> findAll() {
+    public List<PostDto> findAll() {
         return service.getAll();
     }
 
     @PostMapping(value = "/post")
-    public void create(@Valid @RequestBody Post post) {
+    public void create(@Valid @RequestBody PostDto post) {
         log.info("creating a new post");
         service.create(post);
     }
@@ -39,7 +39,7 @@ public class PostController {
     @PutMapping(value = "/post")
     public void update(
             @Validated(Update.class) // <-- см.
-            @RequestBody Post post) {
+            @RequestBody PostDto post) {
         log.info("New post created");
         service.update(post);
     }
