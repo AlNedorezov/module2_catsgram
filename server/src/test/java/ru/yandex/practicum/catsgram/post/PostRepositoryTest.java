@@ -9,11 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import ru.yandex.practicum.catsgram.post.model.Post;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 @DataJpaTest
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 class PostRepositoryTest {
@@ -32,8 +27,9 @@ class PostRepositoryTest {
 
     @Test
     void count() {
+        postRepository.save(post);
         long result = postRepository.count();
-        Assertions.assertEquals(0, result);
+        Assertions.assertEquals(1, result);
     }
 
     @AfterEach
