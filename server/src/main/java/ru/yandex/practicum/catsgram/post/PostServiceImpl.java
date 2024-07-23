@@ -19,18 +19,18 @@ public class PostServiceImpl implements PostService {
         this.postValidator = validator;
     }
 
-    public Post create(PostDto postDto) {
+    public PostDto create(PostDto postDto) {
         final Post post = PostMapper.toPost(postDto);
         postValidator.validate(post);
         postRepository.save(post);
-        return post;
+        return PostMapper.toPostDto(post);
     }
 
-    public Post update(PostDto postDto) {
+    public PostDto update(PostDto postDto) {
         final Post post = PostMapper.toPost(postDto);
         postValidator.validate(post);
         postRepository.save(post);
-        return post;
+        return PostMapper.toPostDto(post);
     }
 
     public List<PostDto> getAll() {
