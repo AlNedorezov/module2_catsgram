@@ -12,3 +12,7 @@ erDiagram
         text photo_url
     }
 ```
+
+# Запуск apache Pulsar
+
+См. https://pulsar.apache.org/docs/3.3.x/getting-started-docker-compose/
