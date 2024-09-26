@@ -15,6 +15,7 @@
     <description>Мини-версия популярной соцсети с фотографиями котов.</description>
     <properties>
         <java.version>11</java.version>
+        <argLine>-Duser.language=en</argLine>
     </properties>
     <dependencies>
         <dependency>
